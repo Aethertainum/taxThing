@@ -1,0 +1,1 @@
+Create a master state to contain information pertinent to the tax year that the functions can call data from.

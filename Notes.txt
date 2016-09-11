@@ -1,0 +1,63 @@
+TODO
+***********************************************************
+- Create a MFS tax liability calculator.
+- Rename Married_Joint_Return_Calculator to liability.
+- ^ for Single_Joint_Return.
+- Differentiate between total tax and tax liability,
+  currently my calculators determine total tax. Tax liability is what is due at the end.. honestly this is semantics ref 2-19 before making a final decision. 
+- Create a required annual payment calculator. ref 2-20
+note: the lesser of 0.9 * est tax this yr || 1 * previous year tax - witholding. / 4 = installments "get the installment dates."
+- Crate a savings bond AGI tax exempt formula ref 3-24
+- Tax liability values from the liability calculators get added to the appropriate tax rates for the DIV and INT income for calculating the true total tax liability. In other words, the taxes are calculated on tax income first, before taxes are calulated on dividents.
+
+note: something useful about how to generate tables off the schedule formula. The IRS takes the mid point amounbt of the $50 range or some bs.. ref chapter 1 again.
+***********************************************************
+
+
+TOTAL FROM AGI DEDUCTIONS
+******************************************************************************
+personal exemption is 4k per person + greater of standard deduction (ref below) vs itemized deduction.
+******************************************************************************
+
+
+
+
+TAX CREDITS
+***********************************************************
+- Remember that there is a special tax credit for individuals with income @ 400% or less than the federal poverty line. These individuals must file a 1040 or 1040A they aren't eligible to file a 1040EZ
+
+- Earned Income Credit calculation?
+***********************************************************
+
+
+
+
+STANDARD DEDUCTION STUFF
+***********************************************************
+Basic Standard Deducton (BSD)
+Single: 6300
+MFJ: 12600
+MFS: 6300
+HOH: 9250
+QW: 12600
+
+Additional Standard Deduction (ASD)
+Single: 1550
+MFJ: 1250
+MFS: 1250
+HOH: 1550
+QW: 1250
+
+BSD + ASD = Standard Deduction (SD)
+
+
+note: 65 or older and blind can claim an addition ASD, if both 65+ and blind, they get a total of two additional ASDs. Ref chapter 2
+
+note: the additional standard deduction applies only to the taxpayer and their spoue that are over the age of 65 || blind. Ref chapter 2
+
+note: when a taxpayer can be claimed on the tax return of another individual, the basic standard deduction is limited to the greater of 1050 || tax payer's earned income + 350 not to exceed the BSD amount. Refer to examples 2-5 and 2-6 in chapter two of the course material 
+************************************************************
+
+
+
+

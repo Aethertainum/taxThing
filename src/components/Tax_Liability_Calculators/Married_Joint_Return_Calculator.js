@@ -3,11 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-function marriedTaxJoint(totalIncome, n) {
+
+function marriedTaxJointWrapper(income) {
+	function marriedTaxJoint(totalIncome, n) {
 	var taxRate, tier, lower;
 
 	if (totalIncome <= 18450) {
-		lower = -1;
+		lower = 0;
 		tier = 1;
 		taxRate = 0.10;
 	}
@@ -47,6 +49,8 @@ function marriedTaxJoint(totalIncome, n) {
 		tier = 7;
 		taxRate = 0.396;
 	}
+
+	// Use these for debugging purposes.
 	// console.log('Tier', tier);
 	// console.log('-------');
 	// console.log('Total Income:', totalIncome);
@@ -56,17 +60,20 @@ function marriedTaxJoint(totalIncome, n) {
 
 	// Termination
 	if (n < 0) {
-		return;
+		
 	}
 	// Base Case
 	if (n === 0) {
 		return 0;
 	}
 
-	return (totalIncome - lower) * taxRate + marriedTaxJoint(lower, tier - 1);
+	return ((totalIncome - lower) * taxRate + marriedTaxJoint(lower, tier - 1));
+	}
+	return marriedTaxJoint(income).toFixed(2);
 }
 
-// Uncomment this to see the Married Joint Filing's taxable income
-// console.log('Your total tax liability is:','$'+ marriedTaxJoint(38450));
 
-exports.default = marriedTaxJoint;
+// Uncomment this to see the Married Joint Filing's taxable income
+console.log('Your total joint-tax liability is:','$'+ marriedTaxJointWrapper(68500));
+
+exports.default = marriedTaxJointWrapper;

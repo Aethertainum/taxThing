@@ -1,0 +1,16 @@
+## Mac OSX ##
+.DS_Store
+
+## NPM ##
+/node_modules
+
+## Compiled Files ##
+bundle.js
+
+## Debug Log ##
+npm-debug.log
+
+
+# IntelliJ
+*.iml
+/.idea
