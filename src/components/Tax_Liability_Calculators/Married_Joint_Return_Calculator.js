@@ -74,6 +74,6 @@ function marriedTaxJointWrapper(income) {
 
 
 // Uncomment this to see the Married Joint Filing's taxable income
-console.log('Your total joint-tax liability is:','$'+ marriedTaxJointWrapper(68500));
+console.log('Your total joint-tax liability is:','$'+ marriedTaxJointWrapper(71200));
 
 exports.default = marriedTaxJointWrapper;

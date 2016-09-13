@@ -41,11 +41,13 @@ function SingleSharedResponsibility(householdincome,status,age1,age2,children) {
 
     var flatAmt = flatAmount(adults,children);
 
-  return twoPct > flatAmt? twoPct : flatAmt;
+  this.AmountResponsible = twoPct > flatAmt? twoPct : flatAmt;
 }
 
-console.log(SingleSharedResponsibility(30000,'marriedjoint',37))
+var test = new SingleSharedResponsibility(30000,'marriedjoint',37);
 
+// console.log(SingleSharedResponsibility(30000,'marriedjoint',37))
+console.log(test);
 
 
 

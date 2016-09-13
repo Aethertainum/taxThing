@@ -1,17 +1,35 @@
-var interestExclusion = require('./Bond_Interest_Exclusion.js');
+// This is if I want it to be a class using a certain type of instantiation style which I forget the name of.
+// ==============================================================================================
+// function CalcBondInterestExclusionPhaseout(modAGI,status,otherWiseExcludable,limitAmt) {
+//   // These denominators are a static number determined in tax laws that may be subjected to changing annually.
+//   var obj = {}; 
+//   var denom = status.toUpperCase() === 'SINGLE'? 15000 : 30000;
+//   var reductionAmt = otherWiseExcludable * ((modAGI - limitAmt)/denom);
+//   obj.excludable = otherWiseExcludable - reductionAmt;
+//   obj.taxable = reductionAmt;
 
-// This variable is being assigned to the calcBondInterestExclusion function's returned object's excludable value.
-// This is for testing purposes and is not ideal. We want this information thrown as parameters to come from a master location.
-// such as a state or object.
-var otherWiseExcludable = interestExclusion.calcBondInterestExclusion(3000,1000,3500).excludable;
-function calcBondInterestExclusionPhaseout(modAGI,status) {
+//   return obj;
+// }
+
+// console.log(CalcBondInterestExclusionPhaseout(77950,'single',125,77200))
+
+// This is if I want to have it become a class utilizing pseudoclassical instantiation styles.
+// Will most likely be swapped out for ES6 syntax.
+// ==============================================================================================
+function CalcBondInterestExclusionPhaseout(modAGI,status,otherWiseExcludable,limitAmt) {
   var denom = status.toUpperCase() === 'SINGLE'? 15000 : 30000;
-  var limitAmt = status.toUpperCase() !== 'MARRIEDJOINT'? 77200: 115750;
   var reductionAmt = otherWiseExcludable * ((modAGI - limitAmt)/denom);
-
-  return {
-    excludable: otherWiseExcludable - reductionAmt,
-    taxable: reductionAmt
-  }
+  this.excludable = otherWiseExcludable - reductionAmt;
+  this.taxable = reductionAmt;
 }
-console.log(calcBondInterestExclusionPhaseout(77950,'single'))
+
+// var test = new CalcBondInterestExclusionPhaseout(77950,'single',125,77200);
+
+// console.log(test);
+
+
+module.exports = CalcBondInterestExclusionPhaseout;
+
+
+
+
