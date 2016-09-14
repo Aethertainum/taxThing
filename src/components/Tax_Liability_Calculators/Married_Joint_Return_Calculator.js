@@ -1,10 +1,6 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-function marriedTaxJointWrapper(income) {
+function MarriedTaxJointWrapper(income) {
 	function marriedTaxJoint(totalIncome, n) {
 	var taxRate, tier, lower;
 
@@ -69,11 +65,12 @@ function marriedTaxJointWrapper(income) {
 
 	return ((totalIncome - lower) * taxRate + marriedTaxJoint(lower, tier - 1));
 	}
-	return marriedTaxJoint(income).toFixed(2);
+	this.marriedTaxJointLiability = marriedTaxJoint(income).toFixed(2);
 }
 
+// For testing purposes
+// var test = new MarriedTaxJointWrapper(150000);
 
-// Uncomment this to see the Married Joint Filing's taxable income
-console.log('Your total joint-tax liability is:','$'+ marriedTaxJointWrapper(71200));
+// console.log(test);
 
-exports.default = marriedTaxJointWrapper;
+module.exports = MarriedTaxJointWrapper;

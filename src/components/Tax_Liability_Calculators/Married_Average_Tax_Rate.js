@@ -1,14 +1,14 @@
 'use strict';
 
-var _MarriedJointReturnCalculator = require('./Married_Joint_Return_Calculator');
+var MarriedTaxJoint = require('./Married_Joint_Return_Calculator');
 
-var _MarriedJointReturnCalculator2 = _interopRequireDefault(_MarriedJointReturnCalculator);
+function AverageTaxRate(taxLiability, taxableIncome) {
+  this.averageTaxRate = ((taxLiability / taxableIncome) * 100).toFixed(2) + '%';
+}
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+// For testing purposes
+// var test = new AverageTaxRate(new MarriedTaxJoint(150000).marriedTaxJointLiability,150000);
 
-function averageTaxRate(taxLiability, taxableIncome) {
-  return taxLiability / taxableIncome;
-} 
+// console.log(test);
 
-// Uncomment this to run the code and see pertinent info
-console.log( 'Your Average Tax Rate is: ' + (averageTaxRate((0, _MarriedJointReturnCalculator2.default)(114706), 114706) * 100).toFixed(2) + '%');
+module.exports = AverageTaxRate;

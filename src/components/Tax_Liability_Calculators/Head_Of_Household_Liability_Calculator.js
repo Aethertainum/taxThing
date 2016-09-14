@@ -1,10 +1,6 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function headOfHouseholdWrapper(income) {
+function HeadOfHouseholdWrapper(income) {
   function headofHousehold(totalIncome, n) {
   var taxRate, tier, lower;
 
@@ -69,11 +65,11 @@ function headOfHouseholdWrapper(income) {
 
   return ((totalIncome - lower) * taxRate + headofHousehold(lower, tier - 1));
   }
-  return headofHousehold(income).toFixed(2);
+  this.HeadOfHouseholdLiability = headofHousehold(income).toFixed(2);
 }
 
+// For testing purposes
+// var test = (new HeadOfHouseholdWrapper(90000));
+// console.log(test);
 
-// Uncomment this to see the Married Joint Filing's taxable income
-console.log('Your total joint-tax liability is:','$'+ headOfHouseholdWrapper(123212));
-
-exports.default = headOfHouseholdWrapper;
+module.exports = HeadOfHouseholdWrapper;

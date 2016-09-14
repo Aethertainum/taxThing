@@ -1,6 +1,7 @@
+'use strict';
 
 function SingleTaxWrapper(income) {
-  function SingleTax(totalIncome, n) {
+  function singleTax(totalIncome, n) {
   var taxRate, tier, lower;
 
   if (totalIncome <= 9225) {
@@ -62,10 +63,13 @@ function SingleTaxWrapper(income) {
     return 0;
   }
 
-  return ((totalIncome - lower) * taxRate + SingleTax(lower, tier - 1));
+  return ((totalIncome - lower) * taxRate + singleTax(lower, tier - 1));
   }
-  return SingleTax(income).toFixed(2);
+  this.singleTaxLiability = singleTax(income).toFixed(2);
 }
 
-console.log('Your total single-tax liability is:','$'+ SingleTaxWrapper(68500));
+// For testing purposes
+// var test = new SingleTaxWrapper(68500);
 
+// console.log(test);
+module.exports = SingleTaxWrapper;
