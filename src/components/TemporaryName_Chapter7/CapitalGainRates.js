@@ -10,9 +10,7 @@ function CapitalGains(regularTax) {
   }
   else if (regularTax >= .15 && regularTax <= .35 ) {
     this.longTerm = .15;
-  } else {
-    this.longTerm = 0;
-  }
+  } 
 }
 
 // For testing purposes

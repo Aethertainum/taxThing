@@ -1,6 +1,6 @@
 // Asset cost basis 
  // -
-// Depreciation (using something like straight-line or MACRS)
+// Depreciation (according to the depreciation methods and conventions such as MACRS or straight-line)
 // =
 // Adjusted basis
 
@@ -9,7 +9,7 @@
 // -
 // Adjusted basis
 // =
-// Realized gain.
+// Realized gain. (this is what will be subjected to the provisions (1245 || 1250) respective tax rates)
 
 
 // Example below.
