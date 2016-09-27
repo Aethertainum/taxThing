@@ -10,7 +10,7 @@ function MedicalExpenses(AGI,medExpense,spouseAge1,spouseAge2) {
 }
 
 // For testing purposes
-// var test = new MedicalExpenses(50000,4200,67,null);
-// console.log(test);
+var test = new MedicalExpenses(50000,4200,67,null);
+console.log(test);
 
 module.exports = MedicalExpenses;

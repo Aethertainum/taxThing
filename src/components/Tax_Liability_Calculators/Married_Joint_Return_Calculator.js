@@ -69,8 +69,8 @@ function MarriedTaxJointWrapper(income) {
 }
 
 // For testing purposes
-// var test = new MarriedTaxJointWrapper(150000);
+var test = new MarriedTaxJointWrapper(108370);
 
-// console.log(test);
+console.log(test);
 
 module.exports = MarriedTaxJointWrapper;
