@@ -1,39 +1,25 @@
-// 1231 transactions are defines as <>
-// They are subjected to either 1245 or 1250 provisions
+'use strict';
+// 1231 transactions are defined as <>. They are used in trade, held 1+ yrs.
+// They are subjected to either 1245 or 1250 recapture provisions
+
+// Net gains on 1231 assets get preferrential tax treatment.
+
+// Net losses are treated as ORDINARY losses, rather than capital losses..
+// this allows you to deduct beyond the normal 3k deduction permitted to CAPITAL losses.
 
 var twelveFifty = require('./1250_Recapture');
 var twelveFortyFive = require('./1245_Recapture');
-
-
-// Realized gain is calculated as
-// ==============================
-// Asset cost basis 
-// -
-// Depreciation (according to the depreciation methods and conventions such as MACRS or straight-line)
-// =
-// Adjusted basis
-
-
-// Selling price 
-// -
-// Adjusted basis
-// =
-// Realized gain. (this is what will be subjected to the provisions (1245 || 1250) respective tax rates) 
-
-// Example:
-// Truck (5-year property)$10,000
-// - MACRS half-year convention depreciation $6,160
-// = Adjusted basis $3,840
-
-// Selling price $7,000
-// - Adjusted basis $3,840
-// = Realized gain $ $3,160
-
 
 // Gain on a 1231 asset is calculated as
 // =====================================
 // Realized gain
 // -
-//respective provision
+// lesser of respective provision rates (1250/1245) or the accumulated depreciation on the asset.
 // =
 // 1231 gain.
+
+function twelveThirtyOneGain(realizedGain,recapture) {
+ this.recapture = 
+}
+
+module.exports = twelveThirtyOneGain;

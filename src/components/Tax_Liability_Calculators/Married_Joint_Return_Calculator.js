@@ -1,10 +1,10 @@
-'use strict';
+import React from 'react';
 
-function MarriedTaxJointWrapper(income) {
-	function marriedTaxJoint(totalIncome, n) {
-	var taxRate, tier, lower;
-
-	if (totalIncome <= 18450) {
+const MarriedTaxJointWrapper = (income) => {
+  const marriedTaxJoint = (totalIncome,n) => {
+    let taxRate, tier, lower;
+    
+    if (totalIncome <= 18450) {
 		lower = 0;
 		tier = 1;
 		taxRate = 0.10;
@@ -64,13 +64,16 @@ function MarriedTaxJointWrapper(income) {
 	}
 
 	return ((totalIncome - lower) * taxRate + marriedTaxJoint(lower, tier - 1));
-	}
-	this.marriedTaxJointLiability = marriedTaxJoint(income).toFixed(2);
-}
+  };
+  return (
+  	<div>
+  	{'Your tax liability is: $' + marriedTaxJoint(income.AGI).toFixed(2)}
+  	</div>
+  );	
+};
 
-// For testing purposes
-var test = new MarriedTaxJointWrapper(108370);
+// For testing purposes.
+// const test = MarriedTaxJointWrapper(108370);
 
-console.log(test);
-
-module.exports = MarriedTaxJointWrapper;
+// console.log('Your tax liability is:' + test);
+export default MarriedTaxJointWrapper;

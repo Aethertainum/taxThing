@@ -1,14 +1,18 @@
-'use strict';
+import React from 'react';
+// import MarriedTaxJointWrapper from './MarriedTaxJoint_Return_Calculator';
+// var marriedTaxJoint = require('./Married_Joint_Return_Calculator');
 
-var MarriedTaxJoint = require('./Married_Joint_Return_Calculator');
-
-function AverageTaxRate(taxLiability, taxableIncome) {
-  this.averageTaxRate = ((taxLiability / taxableIncome) * 100).toFixed(2) + '%';
+const AverageTaxRate = (taxLiability, taxableIncome) => {
+  return (
+    <div>
+    { ((taxLiability / taxableIncome) * 100).toFixed(2) + '%' }
+    </div>
+  )
 }
 
 // For testing purposes
-// var test = new AverageTaxRate(new MarriedTaxJoint(150000).marriedTaxJointLiability,150000);
+// const test = AverageTaxRate(MarriedTaxJoint(150000),150000);
 
 // console.log(test);
 
-module.exports = AverageTaxRate;
+export default AverageTaxRate;

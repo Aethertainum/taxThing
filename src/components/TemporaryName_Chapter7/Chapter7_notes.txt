@@ -1,0 +1,38 @@
+// Adjusted basis is calculated as
+// ==============================
+// Asset cost basis 
+// -
+// Depreciation (according to the depreciation methods and conventions such as MACRS or straight-line)
+// =
+// Adjusted basis
+
+// Realized gain is calculated as
+// ==============================
+// Selling price 
+// -
+// Adjusted basis
+// =
+// Realized gain. (this is what will be subjected to the provisions (1245 || 1250) respective tax rates) 
+
+// Example:
+// Truck (5-year property)$10,000
+// - MACRS half-year convention depreciation $6,160
+// = Adjusted basis $3,840
+
+// Selling price $7,000
+// - Adjusted basis $3,840
+// = Realized gain $ $3,160
+
+
+// Gain on a 1231 asset is calculated as
+// =====================================
+// Realized gain
+// -
+// lesser of respective provision rates (1250/1245) or the accumulated depreciation on the asset.
+// =
+// 1231 gain.
+
+
+//1245 recapture is equivalent to the depreciation amount?
+//Recapture only occurs when the gains exceed the lexxer of the provision rates/accumulated depreciation, otherwise it is an ordinary loss, and it is not subject to any form of recapture?
+
