@@ -1,3 +1,6 @@
+// Note, threshold refers to the amount you have to exceed before paying income tax.
+// This threshold is calculated by taking the standard deduction for the respective 
+// Person's filing status + the standard deduction (currently 6,300)
 var master =  {
   householdIncome: null,
   filingStatus: 'single',

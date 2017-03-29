@@ -10,9 +10,15 @@ const PercentageMethod = (props) => {
 
   return (
     <div>
-      Federal witholding amount:{' $' + ( 17.8 + (.15 * (withholding - 222) ) ).toFixed(2)}
+      Federal witholding amount:{' $' + ( 38.6 + (.15 * (withholding - 480) ) ).toFixed(2)}
     </div>
   );
 }
 
 export default PercentageMethod;
+
+//Why was this on the flash cards?
+
+// 750 Semi-monthly 2 claims: 750 - allowances = 416.6 (b) , 
+// 416.6 - 96 (where did 96 come from?) = 320.6 * 10% = 32.06.
+// This deviates from the formula 

@@ -20,7 +20,7 @@ const DependentCredit = (props) => {
 
   return (
     <div>
-      {'Child tax credit is: $' + qualifiedExpenses * percentage(AGI)}
+      {'Child tax credit is: $' + (qualifiedExpenses * percentage(AGI)).toFixed(2)}
     </div>
   );
 };

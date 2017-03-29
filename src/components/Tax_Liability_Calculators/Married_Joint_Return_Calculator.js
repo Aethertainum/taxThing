@@ -56,7 +56,7 @@ const MarriedTaxJointWrapper = (income) => {
 
 	// Termination
 	if (n < 0) {
-		
+		return;
 	}
 	// Base Case
 	if (n === 0) {

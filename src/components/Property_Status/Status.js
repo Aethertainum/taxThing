@@ -16,7 +16,9 @@ const test = (props) => {
    }
 
    return (
-    //
+    <div>
+      {status}
+    </div>
    );
 }
 
